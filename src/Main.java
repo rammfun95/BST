@@ -15,7 +15,7 @@ public class Main
         c.write(root);
 
         System.out.println("Waiting for result...");
-        System.out.println("Result: " + c.readLong());
+        System.out.println("Result: " + c.readInt());
         curTask.end();
     }
 }

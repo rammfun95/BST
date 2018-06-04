@@ -38,7 +38,7 @@ public class Tree implements AM {
             height = Math.max(height, c.readInt());
         }
 
-        System.out.println("[" + root.getVertex() + "] Build finished.");
+        System.out.printf("[%d] Build finished. = %d", root.getVertex(), height);
         return height;
     }
 
