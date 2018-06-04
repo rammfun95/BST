@@ -36,6 +36,10 @@ public class Tree implements AM {
 
         for (channel c: channels) {
             height = Math.max(height, c.readInt());
+            c.close();
+        }
+        for (point p: points) {
+            p.delete();
         }
 
         System.out.printf("[%d] Build finished. = %d\n", root.getVertex(), height);

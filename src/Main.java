@@ -17,6 +17,10 @@ public class Main
 
         System.out.println("Waiting for result...");
         System.out.println("Result: " + c.readInt());
+
+        c.close();
+        p.delete();
+
         curTask.end();
         long end = System.nanoTime();
         System.out.printf("Time: %d ms\n", (end - start) * 1000);
