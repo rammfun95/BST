@@ -21,6 +21,7 @@ public class BSTGenerator {
         writer.printf("%d\n", size);
         queue.add(vertex);
         vertex++;
+        size--;
 
         while (size > 0) {
             int caseNum = new Random().nextInt(100);
@@ -52,10 +53,12 @@ public class BSTGenerator {
                     queue.add(vertex);
                     size--;
                     vertex++;
-                    writer.printf("%d  right %d\n", currentVertex, vertex);
-                    queue.add(vertex);
-                    size--;
-                    vertex++;
+                    if (size > 0) {
+                        writer.printf("%d  right %d\n", currentVertex, vertex);
+                        queue.add(vertex);
+                        size--;
+                        vertex++;
+                    }
                     break;
                 default:
                     break;
