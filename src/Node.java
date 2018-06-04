@@ -1,7 +1,9 @@
 import java.io.File;
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Node extends Object {
+public class Node implements Serializable
+{
 
     private int vertex;
 
@@ -49,24 +51,6 @@ public class Node extends Object {
         return true;
     }
 
-    public int getHeight()
-    {
-        if (this.getLeft() == null && this.getRight() == null) {
-            return 1;
-        }
-
-        if (this.getLeft() == null) {
-            return this.getRight().getHeight() + 1;
-        }
-
-        if (this.getRight() == null) {
-            return this.getLeft().getHeight() + 1;
-        }
-
-        return Math.max(this.getLeft().getHeight(), this.getRight().getHeight()) + 1;
-    }
-
-
     public static Node buildFromFile(String filename) throws Exception
     {
         Scanner reader = new Scanner(new File(filename));
@@ -94,12 +78,5 @@ public class Node extends Object {
         }
 
         return nodes[0];
-    }
-
-    public static void main(String[] args) throws Exception
-    {
-        Node root = Node.buildFromFile("input");
-
-        System.out.println(root.getHeight());
     }
 }
