@@ -23,6 +23,6 @@ public class Main
 
         curTask.end();
         long end = System.nanoTime();
-        System.out.printf("Time: %d ms\n", (end - start) * 1000);
+        System.out.printf("Time: %3.f ms\n", (end - start) / 1000.0);
     }
 }
