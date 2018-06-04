@@ -9,7 +9,7 @@ public class BSTGenerator {
         int size;
         int vertex = 0;
         LinkedList<Integer> queue = new LinkedList<Integer>();
-        PrintWriter writer = new PrintWriter("./out/input");
+        PrintWriter writer = new PrintWriter("input");
 
         if (args.length == 1) {
             size = Integer.parseInt(args[0]);
