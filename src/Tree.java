@@ -38,8 +38,8 @@ public class Tree implements AM {
             height = Math.max(height, c.readInt());
         }
 
-        System.out.printf("[%d] Build finished. = %d", root.getVertex(), height);
-        return height;
+        System.out.printf("[%d] Build finished. = %d\n", root.getVertex(), height);
+        return height + 1;
     }
 
     @Override
