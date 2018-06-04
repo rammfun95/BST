@@ -4,6 +4,7 @@ public class Main
 {
     public static void main(String[] args) throws Exception
     {
+        long start = System.nanoTime();
         task curTask = new task();
         curTask.addJarFile("Tree.jar");
         Node root = Node.buildFromFile(curTask.findFile("input"));
@@ -17,5 +18,7 @@ public class Main
         System.out.println("Waiting for result...");
         System.out.println("Result: " + c.readInt());
         curTask.end();
+        long end = System.nanoTime();
+        System.out.printf("Time: %d ms\n", (end - start) * 1000);
     }
 }

@@ -64,8 +64,6 @@ public class Node implements Serializable
             String child = reader.next();
             int vertex = reader.nextInt();
 
-            System.out.printf("%d %d %s\n", parent, vertex, child);
-
             if (nodes[vertex] == null) {
                 nodes[vertex] = new Node(vertex);
             }
