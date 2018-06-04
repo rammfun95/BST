@@ -28,7 +28,7 @@ public class Tree implements AM {
         for (Node node: nodes) {
             point p = info.createPoint();
             channel c = p.createChannel();
-            p.execute("Node");
+            p.execute("Tree");
             c.write(node);
             points.add(p);
             channels.add(c);
