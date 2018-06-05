@@ -10,7 +10,6 @@ public class Tree implements AM {
 
     public int getHeight(AMInfo info, Node root)
     {
-        System.out.println("[" + root.getVertex() + "] Build started.");
         ArrayList<Node> nodes = new ArrayList<>();
 
         if (root.getLeft() != null) {
@@ -42,7 +41,6 @@ public class Tree implements AM {
             p.delete();
         }
 
-        System.out.printf("[%d] Build finished. = %d\n", root.getVertex(), height);
         return height + 1;
     }
 
